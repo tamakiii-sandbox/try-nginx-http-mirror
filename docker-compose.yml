@@ -17,6 +17,7 @@ services:
     volumes:
       - ./docker/alpha/usr/local/apache2/htdocs:/usr/local/apache2/htdocs
       - ./docker/alpha/usr/local/apache2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./etc/certs:/etc/certs
 
   beta:
     image: httpd
@@ -25,4 +26,5 @@ services:
     volumes:
       - ./docker/beta/usr/local/apache2/htdocs:/usr/local/apache2/htdocs
       - ./docker/beta/usr/local/apache2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./etc/certs:/etc/certs
 
